@@ -34,10 +34,10 @@ public class AplicacionBancaria {
                     break;
                 case 2:
                     System.out.println("Ingrese el valor a retirar: ");
-                    double userDeposito = teclado.nextDouble();
-                    if (userDeposito < balance) {
-                        balance = balance - userDeposito;
-                        System.out.println("Se han retirado $" + userDeposito + ". Saldo restante $" + balance);
+                    double userRetiro = teclado.nextDouble();
+                    if (userRetiro < balance) {
+                        balance = balance - userRetiro;
+                        System.out.println("Se han retirado $" + userRetiro + ". Saldo restante $" + balance);
                     } else {
                         System.out.println("*** Fondos insuficientes, su saldo actual es $"+balance+ "***");
                     }
@@ -45,9 +45,9 @@ public class AplicacionBancaria {
 
                 case 3:
                     System.out.println("Ingrese el valor a depositar: ");
-                    intUser = teclado.nextInt();
-                    balance = balance + intUser;
-                    System.out.println("Se han depositado $" + intUser + ". Saldo actual $" + balance);
+                    double userDeposito = teclado.nextDouble();
+                    balance = balance + userDeposito;
+                    System.out.println("Se han depositado $" + userDeposito + ". Saldo actual $" + balance);
                     break;
 
                 default:
