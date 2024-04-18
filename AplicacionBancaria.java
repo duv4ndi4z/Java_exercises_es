@@ -13,22 +13,21 @@ public class AplicacionBancaria {
                 3 - Depositar
                 9 - Salir
                 """;
-        int num = 0;
+        int userInput = 0;
         Scanner teclado = new Scanner(System.in);
-        int intUser;
 
         System.out.println("Bienvenido a IronBank");
-        System.out.println("**");
+        System.out.println("***************************************");
         System.out.println("Nombre del Cliente: " + nombreCliente);
         System.out.println("Tipo de cuenta: " + tipoCuenta);
-        System.out.println("Saldo disponible: " + balance);
-        System.out.println("**");
+        System.out.println("Saldo disponible: $" + balance);
+        System.out.println("***************************************");
 
-        while (num != 9) {
+        while (userInput != 9) {
             System.out.println(menu);
-            num = teclado.nextInt();
+            userInput = teclado.nextInt();
 
-            switch (num) {
+            switch (userInput) {
                 case 1:
                     System.out.println("El saldo actualizado es: $" + balance);
                     break;
@@ -51,7 +50,7 @@ public class AplicacionBancaria {
                     break;
 
                 default:
-                    if (num != 9) {
+                    if (userInput != 9) {
                         System.out.println("Entrada incorrecta! Intente de nuevo.");
                     }
             }
